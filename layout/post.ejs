@@ -1,5 +1,6 @@
 <main>
-    <div class="wrap min">
+<head>
+     <div class="wrap min">
         <section class="post-title">
             <h2><%= page.title ? page.title : "没有标题的文章" %></h2>
             <div class="post-meta">
@@ -33,6 +34,27 @@
                     <li>下一篇: 看完啦 (つд⊂)</li>
                 <% } %>
             </ul>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="http://localhost:4000/js/custom/gitalk.min.js"></script>
+   <script src="https://rawgit.com/qhh0205/78e9e0b1f3114db6737f3ed8cdd51d3a/raw/3894c5be5aa2378336b1f5ee0f296fa0b22d06e9/md5.min.js"></script>
+  </head>
+  <div id="gitalk-container"></div>
+    <script>
+        const gitalk = new Gitalk({
+          clientID: '9004d5f4ae5aa8963bcc',          // 8d8e96********797026d3
+          clientSecret: 'c8af06d8ef0a3711692dd368fce5e4073519b08b',  // secrets**********secrets
+          repo: 'blog',          // blogtalk
+          owner: 'wxt1221',   // WeiyiGeek
+          admin: ['wxt'], // ['WeiyiGeek']
+          id: md5(location.pathname),      // Ensure uniqueness and length less than 50
+          distractionFreeMode: false  // Facebook-like distraction free mode
+        })
+    </script>
+
+            <script>
+
+        gitalk.render('gitalk-container')
+          </script>
         </section>
         <% if (page.tags && page.tags.length){ %>
             <section class="post-tags">
