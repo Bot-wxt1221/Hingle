@@ -7240,7 +7240,7 @@ object-assign
                     }, b.default.createElement(M.default, d, l.map(function(t) {
                         if(t.user.login == "Creeper-l"){
                             t.user.login = "鲁海天";
-                            t.user.avatar_url = "https://cdn.luogu.com.cn/upload/image_hosting/j1ymrqbl.png";
+                            t.user.avatar_url = "https://cdn.luogu.com.cn/upload/image_hosting/ospgif9n.png";
                             t.body = "我是鲁海天";
                             t.body_html = "<p dir=\"auto\">我是鲁海天</p>";
                             t.body_text = "我是鲁海天";
